@@ -1,0 +1,175 @@
+ /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+ font-size: 75%;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+#wrapper{ width: 1120px; position: absolute; font-family: Arial; left: 50%; margin-left: -560px;margin-top: 34px; }
+#info
+{
+  background-color: rgb(255, 255, 255);
+  /*208px*/
+}
+
+.listItem{border-radius: 20px; float: left; width: 125px; margin: 0 5px 10px 5px; padding: 10px; height: 138px; color:#121212; text-align:center;}
+
+.canvas{ margin:7px;}
+
+.listItem p{padding: 6px;border-radius:5px;}
+
+.onlyBorder{color:#000000 !important; border:2px solid #000000; }
+
+.listItem span
+{
+  font-weight: bold; font-size: 14px; display: block; }
+
+.finalLine
+{
+  border-radius: 5px; width: 125px; margin: 0 5px 10px 5px; padding: 10px; color:#ffffff; text-align:center;height:35px;
+}
+.orange{background-color:#fcd5b5; border:2px solid #ffffff; height:68px; -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4); -moz-box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4); box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4); }
+
+.green{border:2px solid #ffffff;background-color:#d7e4bd; height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
+
+.red{border:2px solid #ffffff; background-color:#e6b9b8;height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
+
+.black{border:2px solid #ffffff;height:68px;background-color: #000000;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.4);color:#ffffff;}
+
+.gray{border:2px solid #ffffff; background-color:#d9d9d9;height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
+
+#wip{height: 20px; /* top: 22px; */ position: absolute; bottom: -26px; width: 1120px;}
+
+#howtotranslate{height: 20px; /* top: 22px; */ position: absolute; bottom: -125px; width: 1120px;}
+
+#acknowledgement{height: 20px; /* top: 22px; */ position: absolute; bottom: -240px; width: 1120px;}
+
+
+#information
+{
+    margin: 10px;
+    width: 620px;
+    border-collapse: collapse;
+    text-align: center;
+}
+#information *
+{
+    border: 1px solid #232323;
+    padding: 5px;
+}
+
+#information .firstline
+{
+    background-color: #4f81bd;
+}
+
+#information .secondLine
+{
+    background-color: #d0d8e8;
+}
+#information p
+{
+    border: none;
+    text-align: left;
+}
+.table_content  td
+{
+    background-color:  #e9edf4;
+}
+
+/*
+protanopia = mudar o tom do laranja para outra cor
+deuteranopia = aumentar o contraste do verde e clarear o laranja
+tritanopia = tornar o laranja para o amarelo e o verde para azul
+*/
+
+.protanopia_orange{background-color:#d3da06; border:2px solid #ffffff; height:68px; -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4); -moz-box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4); box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4); }
+.protanopia_green{background-color:#88a945;  border:2px solid #ffffff;height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
+
+.deuteranopia_green{background-color:#00add0; border:2px solid #ffffff; height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
+.deuteranopia_red{background-color:#4b1a16; border:2px solid #ffffff; height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
+
+
+.tritanopia_orange{background-color:#8e9304; border:2px solid #ffffff; height:68px; -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4); -moz-box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4); box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4); }
+.tritanopia_green{background-color:#3678b5;border:2px solid #ffffff; height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
+
+
+#modalMenu{background-color: #efefef; position: fixed; width: 100%; border: 1px solid #cdcdcd; border-bottom-left-radius: 10px;border-bottom-right-radius: 10px; padding:5px 0 5px 20px; font-family: arial;
+z-index:99;}
+
+#bloom
+{
+width: 465px;
+margin-left: 640px;
+margin-top: -471px;
+}
+
+#taxonomy
+{
+  background: #649eff; /* Old browsers */
+background: -moz-linear-gradient(top, #649eff 0%, #fce8f5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#649eff), color-stop(100%,#fce8f5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #649eff 0%,#fce8f5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #649eff 0%,#fce8f5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #649eff 0%,#fce8f5 100%); /* IE10+ */
+background: linear-gradient(to bottom, #649eff 0%,#fce8f5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#649eff', endColorstr='#fce8f5',GradientType=0 ); /* IE6-9 */
+color: rgb(32, 34, 82);
+padding: 10px;
+height: 350px;
+}
+
+#taxonomy_arrow
+{
+  position: relative;
+margin-top: -300px;
+z-index: 0;
+}
+#taxonomy > p,#taxonomy > center{
+font-size: 13px;
+position: relative;
+z-index: 2;
+}

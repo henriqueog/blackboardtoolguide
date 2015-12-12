@@ -1,0 +1,711 @@
+<!doctype html>
+<html  lang="pt" xml:lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>titulo</title>
+<script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.colorbox.js"></script>
+<script type="text/javascript" src="scripts/createjs-2013.12.12.min.js"></script>
+<script type="text/javascript" src="scripts/json2.js"></script>
+<script type="text/javascript" src="scripts/l10n.js"></script>
+<script type="text/javascript" src="scripts/encoder.js"></script>
+<script type="text/javascript" src="dictionary/localizations.js"></script>
+ <link rel="stylesheet" type="text/css" href="css/main.css">
+ <link rel="stylesheet" type="text/css" href="css/colorbox.css">
+ <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+</head>
+
+<body onload='init()'>
+  <div id='wrapper'>
+   <div id="info"><p id='title' style='font-size:50px; text-align: center;margin:10px 0 10px 0'>titulo</p>
+   <ul>
+    <li class='listItem canvas'>
+      <canvas id='bottom_arrow' ></canvas>
+      <p style='font-weight: bold;-webkit-transform: rotateZ(-450deg) translateY(10px); transform: rotateZ(450deg) translateY(10px); -webkit-transform-origin: 0 0 0; transform-origin: 0 0 0; top: -153px;left: 89px; position: relative;' id='What_you_want_to_use'>O que você deseja usar</p></li>
+      <li class='listItem canvas'>
+        <canvas id='right_arrow' height='90'></canvas><p style='margin-top: -66px; font-size: 10px; padding: 7px; margin-bottom: 45px; font-weight: bold;position: relative;' id='What_you_want_to_achieve'>O que você quer alcançar?</p><p class='onlyBorder' id='Ease_of_use'>Amigável? É fácil de configurar?</p></li>
+        <li class='listItem  onlyBorder'><span id='Information_Transfer'>Transferência de Informação</span><br> <p id='Information_Transfer_text'>Possibilita a disseminação de informações e conteúdos?</p></li>
+        <li class='listItem  onlyBorder'><span id='Assess_learning'>Avaliação da aprendizagem</span><br> <p id='Assess_learning_text'>É possível acompanhar e avaliar a aprendizagem dos alunos?</p></li>
+        <li class='listItem  onlyBorder'><span id='Communication_and_interaction'>Comunicação & Interação</span><br> <p id='Communication_and_interaction_text'>Pode ser usada na comunicação e interação entre os participantes?</p></li>
+        <li class='listItem  onlyBorder'><span id='Co_create_content'>Colaboratividade</span><br> <p id='Co_create_content_text'>Permite colaboração professor/aluno, aluno/aluno, entre outras?</p></li>
+        <li class='listItem  onlyBorder'><span id='Bloom_s'>Bloom´s</span><br> <p id='Bloom_s_text'>Facilita a construção de habilidades para aquisição de:</p><br><span style='text-align: left; font-weight: normal; font-size: 11px; margin-left: 4px;' id='Bloom_s_text_1'>texto</span></li>
+      </ul>
+    </div>
+      <div id="fix"></div>
+      <ul>
+        <li class='listItem black'     id='recurse_add_archive_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'    id='recurse_add_archive_column_2'>replacementArea</li>
+        <li class='listItem green'    id='recurse_add_archive_column_3'>replacementArea</li>
+        <li class='listItem red'  id='recurse_add_archive_column_4'>replacementArea</li>
+        <li class='listItem orange'         id='recurse_add_archive_column_5'>replacementArea</li>
+        <li class='listItem red'  id='recurse_add_archive_column_6'>replacementArea</li>
+        <li class='listItem gray'         id='recurse_add_archive_column_7'>replacementArea</li>
+      </ul>
+
+
+       <ul>
+        <li class='listItem black'          id='recurse_item_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_item_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_item_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_item_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_item_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_item_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_item_column_7'>replacementArea</li>
+      </ul>
+
+        <ul>
+        <li class='listItem black'          id='recurse_file_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_file_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_file_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_file_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_file_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_file_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_file_column_7'>replacementArea</li>
+      </ul>
+
+  <ul>
+        <li class='listItem black'          id='recurse_image_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_image_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_image_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_image_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_image_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_image_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_image_column_7'>replacementArea</li>
+      </ul>
+
+  <ul>
+        <li class='listItem black'          id='recurse_url_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_url_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_url_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_url_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_url_column_5'>replacementArea</li>
+        <li class='listItem orange'            id='recurse_url_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_url_column_7'>replacementArea</li>
+      </ul>
+
+       <ul>
+        <li class='listItem black'          id='recurse_learningmodule_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_learningmodule_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_learningmodule_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_learningmodule_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_learningmodule_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_learningmodule_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_learningmodule_column_7'>replacementArea</li>
+      </ul>
+
+  <ul>
+        <li class='listItem black'          id='recurse_folder_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_folder_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_folder_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_folder_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_folder_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_folder_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_folder_column_7'>replacementArea</li>
+      </ul>
+
+  <ul>
+        <li class='listItem black'          id='recurse_blankpage_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_blankpage_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_blankpage_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_blankpage_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_blankpage_column_5'>replacementArea</li>
+        <li class='listItem orange'            id='recurse_blankpage_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_blankpage_column_7'>replacementArea</li>
+      </ul>
+
+  <ul>
+        <li class='listItem black'          id='recurse_homepage_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_homepage_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_homepage_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_homepage_column_4'>replacementArea</li>
+        <li class='listItem orange'         id='recurse_homepage_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_homepage_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_homepage_column_7'>replacementArea</li>
+      </ul>
+
+        <ul>
+        <li class='listItem black'          id='recurse_mashup_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_mashup_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_mashup_column_3'>replacementArea</li>
+        <li class='listItem orange'            id='recurse_mashup_column_4'>replacementArea</li>
+        <li class='listItem green'         id='recurse_mashup_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_mashup_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_mashup_column_7'>replacementArea</li>
+      </ul>
+
+         <ul>
+        <li class='listItem black'          id='recurse_survey_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_survey_column_2'>replacementArea</li>
+        <li class='listItem red'          id='recurse_survey_column_3'>replacementArea</li>
+        <li class='listItem green'            id='recurse_survey_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_survey_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_survey_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_survey_column_7'>replacementArea</li>
+      </ul>
+
+      <ul>
+        <li class='listItem black'          id='recurse_assignment_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_assignment_column_2'>replacementArea</li>
+        <li class='listItem red'          id='recurse_assignment_column_3'>replacementArea</li>
+        <li class='listItem green'            id='recurse_assignment_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_assignment_column_5'>replacementArea</li>
+        <li class='listItem green'            id='recurse_assignment_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_assignment_column_7'>replacementArea</li>
+      </ul>
+
+<ul>
+        <li class='listItem black'          id='recurse_assignmentsafe_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_assignmentsafe_column_2'>replacementArea</li>
+        <li class='listItem red'          id='recurse_assignmentsafe_column_3'>replacementArea</li>
+        <li class='listItem green'            id='recurse_assignmentsafe_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_assignmentsafe_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_assignmentsafe_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_assignmentsafe_column_7'>replacementArea</li>
+      </ul>
+
+<ul>
+        <li class='listItem black'          id='recurse_forum_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_forum_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_forum_column_3'>replacementArea</li>
+        <li class='listItem green'            id='recurse_forum_column_4'>replacementArea</li>
+        <li class='listItem green'         id='recurse_forum_column_5'>replacementArea</li>
+        <li class='listItem green'            id='recurse_forum_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_forum_column_7'>replacementArea</li>
+      </ul>
+
+<ul>
+        <li class='listItem black'          id='recurse_blog_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_blog_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_blog_column_3'>replacementArea</li>
+        <li class='listItem green'            id='recurse_blog_column_4'>replacementArea</li>
+        <li class='listItem green'         id='recurse_blog_column_5'>replacementArea</li>
+        <li class='listItem green'            id='recurse_blog_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_blog_column_7'>replacementArea</li>
+      </ul>
+
+      <ul>
+        <li class='listItem black'          id='recurse_wiki_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_wiki_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_wiki_column_3'>replacementArea</li>
+        <li class='listItem green'            id='recurse_wiki_column_4'>replacementArea</li>
+        <li class='listItem orange'         id='recurse_wiki_column_5'>replacementArea</li>
+        <li class='listItem green'            id='recurse_wiki_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_wiki_column_7'>replacementArea</li>
+      </ul>
+
+      <ul>
+        <li class='listItem black'          id='recurse_journal_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_journal_column_2'>replacementArea</li>
+        <li class='listItem red'          id='recurse_journal_column_3'>replacementArea</li>
+        <li class='listItem green'            id='recurse_journal_column_4'>replacementArea</li>
+        <li class='listItem green'         id='recurse_journal_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_journal_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_journal_column_7'>replacementArea</li>
+      </ul>
+
+<ul>
+        <li class='listItem black'          id='recurse_glossary_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_glossary_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_glossary_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_glossary_column_4'>replacementArea</li>
+        <li class='listItem red'         id='recurse_glossary_column_5'>replacementArea</li>
+        <li class='listItem red'            id='recurse_glossary_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_glossary_column_7'>replacementArea</li>
+      </ul>
+
+      <ul>
+        <li class='listItem black'          id='recurse_group_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_group_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_group_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_group_column_4'>replacementArea</li>
+        <li class='listItem green'         id='recurse_group_column_5'>replacementArea</li>
+        <li class='listItem green'            id='recurse_group_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_group_column_7'>replacementArea</li>
+      </ul>
+
+      <ul>
+        <li class='listItem black'          id='recurse_collaboration_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_collaboration_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_collaboration_column_3'>replacementArea</li>
+        <li class='listItem red'            id='recurse_collaboration_column_4'>replacementArea</li>
+        <li class='listItem green'         id='recurse_collaboration_column_5'>replacementArea</li>
+        <li class='listItem green'            id='recurse_collaboration_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_collaboration_column_7'>replacementArea</li>
+      </ul>
+
+      <ul>
+        <li class='listItem black'          id='recurse_webconference_column_1'><span>replacementArea</span><br>replacementArea</li>
+        <li class='listItem gray'           id='recurse_webconference_column_2'>replacementArea</li>
+        <li class='listItem green'          id='recurse_webconference_column_3'>replacementArea</li>
+        <li class='listItem green'            id='recurse_webconference_column_4'>replacementArea</li>
+        <li class='listItem green'         id='recurse_webconference_column_5'>replacementArea</li>
+        <li class='listItem green'            id='recurse_webconference_column_6'>replacementArea</li>
+        <li class='listItem gray'           id='recurse_webconference_column_7'>replacementArea</li>
+      </ul>
+
+<table id='information'>
+      <tr class="firstline"><td colspan="4">replacementArea</td></tr>
+      <tr class="secondLine">
+        <td>replacementArea</td>
+        <td>replacementArea</td>
+        <td>replacementArea</td>
+        <td>replacementArea</td>
+      </tr>
+
+      <tr  class="table_content">
+        <td>replacementArea</td>
+        <td>replacementArea</td>
+        <td>replacementArea</td>
+        <td>replacementArea</td>
+         </tr>
+      <tr  class="secondLine"><td colspan="4">replacementArea</td></tr>
+     </table>
+     <div id="bloom">
+<div id='taxonomy'><center style="font-size:20px">replacementArea</center>
+  <br>
+<p style="text-align:center;font-weight:bold">replacementArea</p><p>replacementArea</p><br>
+<p style="text-align:center;font-weight:bold">replacementArea</p><p>replacementArea</p><br>
+<p style="text-align:center;font-weight:bold">replacementArea</p><p>replacementArea</p><br>
+<p style="text-align:center;font-weight:bold">replacementArea</p><p>replacementArea</p><br>
+<p style="text-align:center;font-weight:bold">replacementArea</p><p>replacementArea</p><br>
+<p style="text-align:center;font-weight:bold">replacementArea</p><p>replacementArea</p>
+<canvas id='taxonomy_arrow' width="465" height="300"></canvas>
+</div>
+<p style="padding:10px 10px 55px 10px">replacementArea</p></div>
+<p style="font-size:18px;font-weight:bold;float:left;padding-top: 20px;">Legenda</p>
+        <ul style="height: 72px;">
+          <li style='float:left;'>
+
+           <p class='listItem green' style='height:35px;font-weight: bolder' id='great_fit'>Funciona bem</p>
+           <p class='listItem orange' style='height:35px;font-weight: bolder' id='can_work_w_some_learning_design'>Com cuidado talvez funcione com algumas ferramentas</p>
+           <p class='listItem red'  style='height:35px;font-weight: bolder' id='not_best_tool_for_the_job'>Não é a melhor ferramenta</p>
+         </li>
+       </ul>
+<ul>
+    <li style='float:right;margin-left:10px'>
+      <p style=''>Adaptado para blackboard, do original para Moodle de Joyce Seitzinger (<a href="http://twitter.com/catspyjamasnz" title="">@catspyjamasnz</a>) <a href="http://www.cats-pyjamas.net" title="">www.cats-pyjamas.net</a> / <a href="http://www.eit.ac.nz" title="">www.eit.ac.nz</a></p>
+    </li>
+    <li style='float: left;'>
+      <p style='' id='adaptation'>Adapted and translated by:   <span> Henrique Oliveira (<a href="http://www.henriqueog.com" title="">http://www.henriqueog.com</a>)</p>
+    </li>
+</ul>
+
+<div id='wip'>
+  <hr>
+  <p style='font-size:20px;text-align:center'>Precisamos de sua ajuda para melhorá-lo!</p>
+  <p>Essa conversão está diariamente em constante desenvolvimento. </p>
+  <p>Queremos ainda inserir uma versão para daltônicos, explicação mais detalhada de cada recurso, entre outros.</p>
+  <p>Se esta página não está se comportando de forma normal, por favor nos informe. Constatamos que no navegador Google Chrome e no Mozilla Firefox, a visualização da página está normal.</p>
+  <p>Caso tenha uma sugestão que agregará valor e entendimento melhor deste guia, envie para <b>henrique@henriqueog.com</b>.</p>
+</div>
+
+<div id='howtotranslate'>
+  <br>
+  <hr>
+<p style='font-size:20px;text-align:center'>Como traduzir</p>
+          <p>Baixe este <a href="dictionary/[localization_language].json">arquivo</a></p>
+          <p>Ele contém todas as frases desse guia que estão nesta página</p>
+          <p>Envie o arquivo já com a localização feita para <b>henrique@henriqueog.com</b> e nós faremos a inserção da localização neste guia.</p>
+</div>
+
+<div id='acknowledgement'>
+  <hr>
+<p style='font-size:20px;text-align:center'>Agradecimentos</p>
+          <p>Esta conversão para HTML só foi possível devido as pessoas abaixo relacionadas:</p><br>
+          <p><a href='http://www.cats-pyjamas.net/moodle-tool-guide/' target='_blank'>Joyce Setizinger</a> - Autora do 'Moodle Tool Guide for Teachers'</p>
+          <p><a href='http://www.brazcubas.br' target='_blank'>Universidade BrazCubas</a> - que me deu a oportunidade de trabalhar com Ensino a distância</p>
+          <p style='margin-bottom: 20px;'><a href='https://github.com/eligrey' target='_blank'>Eli Grey</a> - que criou a library l10n.js que permite eu e outras pessoas localizarem esta página para linguagens diferentes</p>
+</div>
+     </div>
+     <div id="modalMenu">
+      <input type="checkbox" id="infoColumnCheckbox" onclick="setFixedDiv()">Fixar primeira linha na tela? &dArr;</input>
+      <p style="float: right; margin-right: 24px;">Olá, caso você tenha <span style='font-weight:bold'>discromatopsia</span>, selecione qual é o tipo e as cores serão ajustadas para melhorar a visualização&nbsp;<select id='dyschromatopsiaSelect' onchange='changeColors()'>
+        <option value=''></option>
+        <option value='protanopia'>protanopia</option>
+        <option value='deuteranopia'>deuteranopia</option>
+        <option value='tritanopia'>tritanopia</option>
+        <option value='reset'>resetar cores</option>
+      </select></p>
+
+     </div>
+
+
+</body>
+</html>
+
+<script>
+function init(){
+  //$.colorbox({html:"<div style='font-family:arial;font-size:1.2em;'><p style='font-size:20px'>Como usar este guia </p><br><ol><li>• Você é uma professora nova para o Moodle? Utilize este guia para escolher a ferramenta certa para o seu trabalho. </li> <li>• Sabe qual ferramenta você quer usar? Siga através das linhas (cada linha corresponde a um recurso do moodle) para ver os seus pontos fortes e pontos fracos. </li> <li>• Tem determinados objetivos educativos? Veja nas colunas as ferramentas apropriadas.</li></ol></div>"});
+
+var canvas_arrow_bottom = new createjs.Stage("bottom_arrow");
+var canvas_arrow_right = new createjs.Stage("right_arrow");
+var canvas_taxonomy_arrow = new createjs.Stage("taxonomy_arrow");
+
+var arrow = new createjs.Shape();
+arrow.graphics.beginFill('#f79646');
+arrow.graphics.setStrokeStyle(3, 'round');
+arrow.graphics.beginStroke("#FFFFFF");
+arrow.graphics.moveTo(0,0);
+arrow.graphics.lineTo(62,0);
+arrow.graphics.lineTo(62,145);
+arrow.graphics.lineTo(92,145);
+arrow.graphics.lineTo(31,175);
+arrow.graphics.lineTo(-30,145);
+arrow.graphics.lineTo(0,145);
+arrow.graphics.lineTo(0,0);
+arrow.graphics.endFill();
+arrow.shadow = new createjs.Shadow('#121212',0,0,8);
+arrow.scaleX = .6;
+arrow.scaleY = .6;
+
+canvas_arrow_bottom.addChild(arrow);
+canvas_arrow_bottom.x = 40;
+canvas_arrow_bottom.y = 2;
+canvas_arrow_bottom.scaleX = 1.3;
+canvas_arrow_bottom.scaleY = 1.3;
+canvas_arrow_bottom.update();
+
+canvas_arrow_right.addChild(arrow);
+canvas_arrow_right.x=10;
+canvas_arrow_right.y=65;
+canvas_arrow_right.scaleX = 1.1;
+canvas_arrow_right.scaleY = 1.1;
+canvas_arrow_right.rotation = -90;
+canvas_arrow_right.update();
+
+var taxonomy_arrow = new createjs.Shape();
+taxonomy_arrow.graphics.beginLinearGradientFill(["#fff","#f3fb32"],[0,1],0,75,0,300);
+taxonomy_arrow.graphics.moveTo(50,100);
+taxonomy_arrow.graphics.lineTo(222,0);
+taxonomy_arrow.graphics.lineTo(395,100);
+taxonomy_arrow.graphics.lineTo(300,100);
+taxonomy_arrow.graphics.lineTo(300,300);
+taxonomy_arrow.graphics.lineTo(145,300);
+taxonomy_arrow.graphics.lineTo(145,100);
+taxonomy_arrow.graphics.lineTo(0,100);
+taxonomy_arrow.graphics.endFill();
+canvas_taxonomy_arrow.addChild(taxonomy_arrow);
+canvas_taxonomy_arrow.update();
+}
+
+//localization
+if (location.hash) {
+  String.locale = location.hash.substr(1);
+}
+
+var localize = function (string, fallback) {
+  var localized = string.toLocaleString();
+  if (localized !== string) {
+    return localized;
+  } else {
+    return fallback;
+  }
+};
+
+var title                            =document.getElementById("title").firstChild;
+var What_you_want_to_use             =document.getElementById('What_you_want_to_use').firstChild;
+var What_you_want_to_achieve         =document.getElementById('What_you_want_to_achieve').firstChild;
+var Ease_of_use                      =document.getElementById('Ease_of_use').firstChild;
+var Information_Transfer             =document.getElementById('Information_Transfer').firstChild;
+var Information_Transfer_text        =document.getElementById('Information_Transfer_text').firstChild;
+var Assess_learning                  =document.getElementById('Assess_learning').firstChild;
+var Assess_learning_text             =document.getElementById('Assess_learning_text').firstChild;
+var Communication_and_interaction      =document.getElementById('Communication_and_interaction').firstChild;
+var Communication_and_interaction_text =document.getElementById('Communication_and_interaction_text').firstChild;
+var Co_create_content                =document.getElementById('Co_create_content').firstChild;
+var Co_create_content_text           =document.getElementById('Co_create_content_text').firstChild;
+var Bloom_s                          =document.getElementById('Bloom_s').firstChild;
+var Bloom_s_text                     =document.getElementById('Bloom_s_text').firstChild;
+var Bloom_s_text_1                   =document.getElementById('Bloom_s_text_1').firstChild;
+
+//footer_info
+var footer_info0=document.getElementById('great_fit').firstChild;
+var footer_info1 = document.getElementById('can_work_w_some_learning_design').firstChild;
+var footer_info2 = document.getElementById('not_best_tool_for_the_job').firstChild;
+
+var footer_info5_line0 = document.getElementById('adaptation').firstChild;
+var footer_info5_line1 = document.getElementById('adaptation').children[0];
+
+//wip
+var wip=document.getElementById('wip');
+var wip_title=wip.children[1];
+var wip_txt1=wip.children[2];
+var wip_txt2=wip.children[3];
+var wip_txt3=wip.children[4];
+var wip_txt4=wip.children[5];
+
+//translate
+var howtotranslate = document.getElementById('howtotranslate');
+var howtotranslate_title=howtotranslate.children[2];
+var howtotranslate_txt2=howtotranslate.children[3];
+var howtotranslate_txt3=howtotranslate.children[4];
+var howtotranslate_txt4=howtotranslate.children[5];
+
+var acknowledgement = document.getElementById('acknowledgement');
+var acknowledgement_title=acknowledgement.children[1];
+var acknowledgement_1=acknowledgement.children[2];
+var acknowledgement_2=acknowledgement.children[3];
+var acknowledgement_3=acknowledgement.children[5];
+var acknowledgement_4=acknowledgement.children[6];
+
+var explanation_footer= document.getElementById("information");
+var explanation_footer_title            = explanation_footer.children[0].children[0];
+var explanation_footer_diary_title      = explanation_footer.children[0].children[1].children[0];
+var explanation_footer_blog_title       = explanation_footer.children[0].children[1].children[1];
+var explanation_footer_forum_title      = explanation_footer.children[0].children[1].children[2];
+var explanation_footer_wiki_title       = explanation_footer.children[0].children[1].children[3];
+
+var explanation_footer_diary_content      = explanation_footer.children[0].children[2].children[0];
+var explanation_footer_blog_content       = explanation_footer.children[0].children[2].children[1];
+var explanation_footer_forum_content      = explanation_footer.children[0].children[2].children[2];
+var explanation_footer_wiki_content       = explanation_footer.children[0].children[2].children[3];
+
+var explanation_footer_lastLine = explanation_footer.children[0].children[3];
+
+var bloom_taxonomy = document.getElementById("taxonomy");
+var bloom_taxonomy_title = bloom_taxonomy.firstChild;
+
+var bloom_taxonomy_create_title= bloom_taxonomy.children[2];
+var bloom_taxonomy_create_content= bloom_taxonomy.children[3];
+
+var bloom_taxonomy_evaluate_title= bloom_taxonomy.children[5];
+var bloom_taxonomy_evaluate_content= bloom_taxonomy.children[6];
+
+var bloom_taxonomy_analyze_title= bloom_taxonomy.children[8];
+var bloom_taxonomy_analyze_content= bloom_taxonomy.children[9];
+
+var bloom_taxonomy_apply_title= bloom_taxonomy.children[11];
+var bloom_taxonomy_apply_content= bloom_taxonomy.children[12];
+
+var bloom_taxonomy_understand_title= bloom_taxonomy.children[14];
+var bloom_taxonomy_understand_content= bloom_taxonomy.children[15];
+
+var bloom_taxonomy_remember_title= bloom_taxonomy.children[17];
+var bloom_taxonomy_remember_content= bloom_taxonomy.children[18];
+
+var bloom_taxonomy_last_paragraph = document.getElementById("bloom").children[1];
+
+//rows
+var rowsReference = [
+'recurse_add_archive_column_',
+'recurse_item_column_',
+'recurse_file_column_',
+'recurse_image_column_',
+'recurse_url_column_',
+'recurse_learningmodule_column_',
+'recurse_folder_column_',
+'recurse_blankpage_column_',
+'recurse_homepage_column_',
+'recurse_mashup_column_',
+'recurse_survey_column_',
+'recurse_assignment_column_',
+'recurse_assignmentsafe_column_',
+'recurse_forum_column_',
+'recurse_blog_column_',
+'recurse_wiki_column_',
+'recurse_journal_column_',
+'recurse_glossary_column_',
+'recurse_group_column_',
+'recurse_collaboration_column_',
+'recurse_webconference_column_'];
+
+document.title = title.nodeValue = localize("%title", title.nodeValue);
+bottom_arrow.nodeValue = localize("%bottom_arrow",bottom_arrow.nodeValue);
+What_you_want_to_use.nodeValue = localize("%What_you_want_to_use",What_you_want_to_use.nodeValue);
+right_arrow.nodeValue = localize("%right_arrow",right_arrow.nodeValue);
+What_you_want_to_achieve.nodeValue = localize("%What_you_want_to_achieve",What_you_want_to_achieve.nodeValue);
+Ease_of_use.nodeValue = localize("%Ease_of_use",Ease_of_use.nodeValue);
+Information_Transfer.nodeValue = localize("%Information_Transfer",Information_Transfer.nodeValue);
+Information_Transfer_text.nodeValue = localize("%Information_Transfer_text",Information_Transfer_text.nodeValue);
+Assess_learning.nodeValue = localize("%Assess_learning",Assess_learning.nodeValue);
+Assess_learning_text.nodeValue = localize("%Assess_learning_text",Assess_learning_text.nodeValue);
+Communication_and_interaction .nodeValue = localize("%Communication_and_interaction",Communication_and_interaction.nodeValue);
+Communication_and_interaction_text.nodeValue = localize("%Communication_and_interaction_text",Communication_and_interaction_text.nodeValue);
+Co_create_content.nodeValue = localize("%Co_create_content",Co_create_content.nodeValue);
+Co_create_content_text.nodeValue = localize("%Co_create_content_text",Co_create_content_text.nodeValue);
+Bloom_s.nodeValue = localize("%Bloom_s",Bloom_s.nodeValue);
+Bloom_s_text.nodeValue = localize("%Bloom_s_text",Bloom_s_text.nodeValue);
+Bloom_s_text_1.nodeValue = localize("%Bloom_s_text_1",Bloom_s_text_1.nodeValue);
+footer_info0.nodeValue=localize("%great_fit",footer_info0.nodeValue);
+footer_info1.nodeValue=localize("%can_work_w_some_learning_design",footer_info1.nodeValue);
+footer_info2.nodeValue=localize("%not_best_tool_for_the_job",footer_info2.nodeValue);
+
+footer_info5_line0.nodeValue=localize("%adaptation_line0",footer_info5_line0.nodeValue);
+footer_info5_line1.innerHTML=localize("%adaptation_line1",footer_info5_line1.innerHTML);
+
+wip_title.innerHTML = localize("%wip_title",wip_title.innerHTML);
+wip_txt1.innerHTML = localize("%wip_txt1",wip_txt1.innerHTML);
+wip_txt2.innerHTML = localize("%wip_txt2",wip_txt2.innerHTML);
+wip_txt3.innerHTML = localize("%wip_txt3",wip_txt3.innerHTML);
+wip_txt4.innerHTML = localize("%wip_txt4",wip_txt4.innerHTML);
+
+howtotranslate_title.innerHTML=localize("%howtotranslate_title",howtotranslate_title.innerHTML);
+howtotranslate_txt2.innerHTML=localize("%howtotranslate_txt2",howtotranslate_txt2.innerHTML);
+howtotranslate_txt3.innerHTML=localize("%howtotranslate_txt3",howtotranslate_txt3.innerHTML);
+howtotranslate_txt4.innerHTML=localize("%howtotranslate_txt4",howtotranslate_txt4.innerHTML);
+
+acknowledgement_title.innerHTML=localize("%acknowledgement_title",acknowledgement_title.innerHTML);
+acknowledgement_1.innerHTML=localize("%acknowledgement_1",acknowledgement_1.innerHTML);
+acknowledgement_2.innerHTML=localize("%acknowledgement_2",acknowledgement_2.innerHTML);
+acknowledgement_3.innerHTML=localize("%acknowledgement_3",acknowledgement_3.innerHTML);
+acknowledgement_4.innerHTML=localize("%acknowledgement_4",acknowledgement_4.innerHTML);
+
+explanation_footer_title.innerHTML = localize("%explanation_footer_title",explanation_footer_title.innerHTML);
+explanation_footer_diary_title.innerHTML = localize("%explanation_footer_diary_title",explanation_footer_diary_title.innerHTML);
+explanation_footer_blog_title.innerHTML = localize("%explanation_footer_blog_title",explanation_footer_blog_title.innerHTML);
+explanation_footer_forum_title.innerHTML = localize("%explanation_footer_forum_title",explanation_footer_forum_title.innerHTML);
+explanation_footer_wiki_title.innerHTML = localize("%explanation_footer_wiki_title",explanation_footer_wiki_title.innerHTML);
+explanation_footer_diary_content.innerHTML = localize("%explanation_footer_diary_content",explanation_footer_diary_content.innerHTML);
+explanation_footer_blog_content.innerHTML = localize("%explanation_footer_blog_content",explanation_footer_blog_content.innerHTML);
+explanation_footer_forum_content.innerHTML = localize("%explanation_footer_forum_content",explanation_footer_forum_content.innerHTML);
+explanation_footer_wiki_content.innerHTML = localize("%explanation_footer_wiki_content",explanation_footer_wiki_content.innerHTML);
+explanation_footer_lastLine.innerHTML = localize("%explanation_footer_lastLine",explanation_footer_lastLine.innerHTML);
+bloom_taxonomy_title.innerHTML = localize("%bloom_taxonomy_title",bloom_taxonomy_title.innerHTML);
+bloom_taxonomy_create_title.innerHTML = localize("%bloom_taxonomy_create_title",bloom_taxonomy_create_title.innerHTML);
+bloom_taxonomy_create_content.innerHTML = localize("%bloom_taxonomy_create_content",bloom_taxonomy_create_content.innerHTML);
+bloom_taxonomy_evaluate_title.innerHTML = localize("%bloom_taxonomy_evaluate_title",bloom_taxonomy_evaluate_title.innerHTML);
+bloom_taxonomy_evaluate_content.innerHTML = localize("%bloom_taxonomy_evaluate_content",bloom_taxonomy_evaluate_content.innerHTML);
+bloom_taxonomy_analyze_title.innerHTML = localize("%bloom_taxonomy_analyze_title",bloom_taxonomy_analyze_title.innerHTML);
+bloom_taxonomy_analyze_content.innerHTML = localize("%bloom_taxonomy_analyze_content",bloom_taxonomy_analyze_content.innerHTML);
+bloom_taxonomy_apply_title.innerHTML = localize("%bloom_taxonomy_apply_title",bloom_taxonomy_apply_title.innerHTML);
+bloom_taxonomy_apply_content.innerHTML = localize("%bloom_taxonomy_apply_content",bloom_taxonomy_apply_content.innerHTML);
+bloom_taxonomy_understand_title.innerHTML = localize("%bloom_taxonomy_understand_title",bloom_taxonomy_understand_title.innerHTML);
+bloom_taxonomy_understand_content.innerHTML = localize("%bloom_taxonomy_understand_content",bloom_taxonomy_understand_content.innerHTML);
+bloom_taxonomy_remember_title.innerHTML = localize("%bloom_taxonomy_remember_title",bloom_taxonomy_remember_title.innerHTML);
+bloom_taxonomy_remember_content.innerHTML = localize("%bloom_taxonomy_remember_content",bloom_taxonomy_remember_content.innerHTML);
+bloom_taxonomy_last_paragraph.innerHTML = localize("%bloom_taxonomy_last_paragraph",bloom_taxonomy_last_paragraph.innerHTML);
+
+//recurses
+for (var row = 0; row < rowsReference.length; row++) {
+  //columns
+  for (var column = 0; column < 8; column++) {
+    var elementSelect;
+    if(column==0)
+    {
+     elementSelect=document.getElementById(rowsReference[row]+String(column+1)).firstChild;
+     elementSelect.firstChild.nodeValue = localize("%"+String(rowsReference[row])+'title',elementSelect.firstChild.nodeValue);
+   }
+   else
+   {
+    if(column==1)
+    {
+      elementSelect=document.getElementById(rowsReference[row]+String(column)).lastChild;
+      elementSelect.nodeValue = localize("%"+String(rowsReference[row])+String(column),elementSelect.nodeValue);
+    }
+    else
+    {
+      elementSelect=document.getElementById(rowsReference[row]+String(column)).firstChild;
+      elementSelect.nodeValue = localize("%"+String(rowsReference[row])+String(column),elementSelect.nodeValue);
+    }
+  }
+}
+}
+
+document.documentElement.dir = localize("%locale.dir", document.documentElement.dir);
+document.documentElement.lang = String.locale || document.documentElement.lang;
+
+//dyschromatopsia function
+function changeColors()
+{
+  var colorSelected=document.getElementById('dyschromatopsiaSelect').value;
+  resetColors();
+  if(colorSelected !='')
+  {
+    switch(colorSelected)
+    {
+      case 'protanopia':
+      var orangeChange = document.getElementsByClassName('orange');
+      var greenChange=document.getElementsByClassName('green');
+      while(orangeChange.length>0)
+      {
+        orangeChange[orangeChange.length-1].setAttribute('class','listItem protanopia_orange');
+        Array(orangeChange).pop();
+      }
+      while(greenChange.length>0)
+      {
+        greenChange[greenChange.length-1].setAttribute('class','listItem protanopia_green');
+        Array(greenChange).pop();
+      }
+      break;
+      case 'deuteranopia':
+         var redChange = document.getElementsByClassName('red');
+      var greenChange=document.getElementsByClassName('green');
+      while(redChange.length>0)
+      {
+        redChange[redChange.length-1].setAttribute('class','listItem deuteranopia_red');
+        Array(redChange).pop();
+      }
+      while(greenChange.length>0)
+      {
+        greenChange[greenChange.length-1].setAttribute('class','listItem deuteranopia_green');
+        Array(greenChange).pop();
+      }
+      break;
+      case 'tritanopia':
+      var orangeChange = document.getElementsByClassName('orange');
+      var greenChange=document.getElementsByClassName('green');
+      while(orangeChange.length>0)
+      {
+        orangeChange[orangeChange.length-1].setAttribute('class','listItem tritanopia_orange');
+        Array(orangeChange).pop();
+      }
+      while(greenChange.length>0)
+      {
+        greenChange[greenChange.length-1].setAttribute('class','listItem tritanopia_green');
+        Array(greenChange).pop();
+      }
+      break;
+      case 'reset':
+      resetColors();
+      break;
+    }
+  }
+}
+
+function resetColors()
+{
+var colors=['protanopia_orange', 'protanopia_green', 'deuteranopia_green', 'deuteranopia_red', 'tritanopia_orange', 'tritanopia_green'];
+
+      for (var i = 0; i < colors.length; i++) {
+        var capturedColor=document.getElementsByClassName(colors[i]);
+
+        if(capturedColor.length>0)
+        {
+         while(capturedColor.length>0)
+         {
+          if(String(colors[i]).search('orange')!=-1)
+          {
+            capturedColor[capturedColor.length-1].setAttribute('class','listItem orange');
+          }
+          if(String(colors[i]).search('green')!=-1)
+          {
+            capturedColor[capturedColor.length-1].setAttribute('class','listItem green');
+          }
+          if(String(colors[i]).search('red')!=-1)
+          {
+            capturedColor[capturedColor.length-1].setAttribute('class','listItem red');
+          }
+          Array(capturedColor).pop();
+        }
+      }
+    };
+}
+
+function setFixedDiv()
+{
+  var check = document.getElementById("infoColumnCheckbox");
+  if(check.checked==true)
+  {
+    document.getElementById("info").style.setProperty("position", "fixed");
+    document.getElementById("info").style.setProperty("z-index","98");
+    document.getElementById("fix").style.setProperty("height","242px");
+  }
+  else
+  {
+    document.getElementById("info").style.setProperty("position", "initial");
+    document.getElementById("fix").style.setProperty("height","0px");
+  }
+}
+</script>
