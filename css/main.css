@@ -130,7 +130,7 @@ tritanopia = tornar o laranja para o amarelo e o verde para azul
 .protanopia_green{background-color:#88a945;  border:2px solid #ffffff;height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
 
 .deuteranopia_green{background-color:#00add0; border:2px solid #ffffff; height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
-.deuteranopia_red{background-color:#4b1a16; border:2px solid #ffffff; height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4);}
+.deuteranopia_red{background-color:#4b1a16; border:2px solid #ffffff; height:68px;-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4);-moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.4);box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4); color: #fff;}
 
 
 .tritanopia_orange{background-color:#8e9304; border:2px solid #ffffff; height:68px; -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.4); -moz-box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4); box-shadow:0px 3px 4px 0px rgba(50, 50, 50, 0.4); }
